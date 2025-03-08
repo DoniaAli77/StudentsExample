@@ -1,9 +1,10 @@
 const express = require("express");
+const bodyParser = require("body-parser");
 const app = express();
 const mongoose = require("mongoose");
 const studentModel = require("./Models/studentModel"); // * Importing the student model
 
-app.use(express.json());
+app.use(express.json());// app.use(bodyParser.json());
 app.use(express.urlencoded({ extended: false }));
 
 

@@ -67,7 +67,7 @@ app.put("/students/:id", async (req, res) => {
 app.delete("/students/:id", async (req, res) => {
   try {
     const student = await studentModel.findByIdAndDelete(req.params.id);
-    return res.status(200).json({student,msg:"deleted"});
+    return res.status(204).json({student,msg:"deleted"});
   } catch (error) {
     return res.status(500).json({ error: err });
   }

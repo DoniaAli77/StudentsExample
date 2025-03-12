@@ -56,7 +56,7 @@ app.put("/students/:id", async (req, res) => {
       },
       { new: true }
     );
-    return res.status(200).json({student,msg:"updated"});
+    return res.status(204).json({student,msg:"updated"});
   } catch (error) {
     return res.status(500).json({ error: err });
   }
